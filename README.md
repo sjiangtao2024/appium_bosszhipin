@@ -1,4 +1,4 @@
-# 使用Appnium Python自动化安卓/IOS应用测试
+# 使用Appnium Python自动化安卓应用测试
 ## 目标
 使用Appium Python自动化Boss直聘沟通与简历投递，实现以下功能：
   - 启动Boss直聘App(简历已经准备好)
@@ -10,6 +10,54 @@
   - 点击符合条件的职位，进入职位详情页
     - 点击立即沟通
   - 进入消息页
+    - 遍历消息
+    - 点击未读消息
+    - 如果HR有回复，发送消息给HR告知自己的年龄
+    - 对回复进行分析，如果确定没有年龄限制，则发送简历给HR
+
+## 测试环境
+Windows 11
+Python 3.12
+Appium Server
+Appium Inspector
+Boss直聘App(需要提前准备好在线简历)
+硬件:荣耀40手机
+
+## Appium Python 环境配置
+### 安装Appium Python库
+```
+pip install Appium-Python-Client
+```
+### 安装node.js与npm
+
+```
+请参照官方文档安装对应平台
+```
+### 安装Appium Server
+```
+npm install -g appium
+```
+### Appium Server 启动
+##### 为了避免权限问题，需要启动Appium Server时加上参数：
+```
+appium --relexed-security
+```
+### ADB 连接
+
+#### 由于测试手机为华为系的荣耀，对Android系统改动比较大，所以启用开发者模式时，adb无法连接，解决方法就是下载抽取的荣耀驱动
+```
+分别进入all与new文件夹，分别运行DriverUninstall.exe
+```
+
+### Appium Inspector Desired Capabilities 配置
+```
+{
+  "platformName": "Android",
+  "appium:platformVersion": "12.0",
+  "appium:deviceName": "RKY-AN00",
+  "appium:udid": "A9TR9X3522W02769",
+  "appium:appPackage": "com.hpbr.bosszhipin",
+  "appium:appActivity": "com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
   "appium:appWaitActivity": "com.hpbr.bosszhipin.module.main.activity.MainActivity, com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
   "appium:automationName": "UiAutomator2",
   "appium:ensureWebviewsHavePages": true,
@@ -33,6 +81,13 @@ adb shell monkey -p com.hpbr.bosszhipin -c android.intent.category.LAUNCHER 1
 python boss_android.py
 ```
 
+### 默认是模拟点击立即沟通，如果实际投递，需要将函数jobs_apply中的job_card_detail_page_click_simulate(driver)注释掉并取消注释job_card_detail_page_click_chat(driver)
+
+```
+job_card_detail_page_click_simulate(driver)
+#job_card_detail_page_click_chat(driver)
+```
+
 #### 运行结果如下：
 ```
 2024-09-24 09:06:56,722 - jobs_data_output - INFO - 兼职系统工程师投递数为4
@@ -50,4 +105,4 @@ python boss_android.py
 ##图片参考
 
 boss直聘APP界面
-<img src="[path/to/image.jpg](https://github.com/sjiangtao2024/appium_bosszhipin/blob/main/screen_shots/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240924100429.jpg)" alt="Bosszhipin APP" width="300" height="200">
+<img src="path/to/image.jpg" alt="描述" width="300" height="200">
