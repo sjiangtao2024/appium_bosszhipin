@@ -81,7 +81,15 @@ adb shell monkey -p com.hpbr.bosszhipin -c android.intent.category.LAUNCHER 1
 ```
 
 ### 运行代码
+#### 修改.env文件
+  - ##### 将CAPABILITIES_FILE_NAME修改为手机的包含Desired Capabilities信息的json文件
+  - ##### 设置JOB_NUM的数量，每个期望职位都会投递JOB_NUM个职位，因为Boss直聘的职位以卡片组的形式组织，每个卡片组显示4个职位，可能实际会多于设定的JOB_NUM
 
+```
+REMOTE_URL= http://<Appium server address>:4723
+CAPABILITIES_FILE_NAME=boss_honor_capabilities.json
+JOB_NUM=1
+```
 ```
 python boss_android.py
 ```
