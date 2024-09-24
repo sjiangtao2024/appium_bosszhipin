@@ -1,4 +1,4 @@
-# 使用Appnium Python自动化安卓应用测试
+# 使用Appnium Python自动化安卓/IOS应用测试
 ## 目标
 使用Appium Python自动化Boss直聘沟通与简历投递，实现以下功能：
   - 启动Boss直聘App(简历已经准备好)
@@ -10,54 +10,6 @@
   - 点击符合条件的职位，进入职位详情页
     - 点击立即沟通
   - 进入消息页
-    - 遍历消息
-    - 点击未读消息
-    - 如果HR有回复，发送消息给HR告知自己的年龄
-    - 对回复进行分析，如果确定没有年龄限制，则发送简历给HR
-
-## 测试环境
-Windows 11
-Python 3.12
-Appium Server
-Appium Inspector
-Boss直聘App(需要提前准备好在线简历)
-硬件:荣耀40手机
-
-## Appium Python 环境配置
-### 安装Appium Python库
-```
-pip install Appium-Python-Client
-```
-### 安装node.js与npm
-
-```
-请参照官方文档安装对应平台
-```
-### 安装Appium Server
-```
-npm install -g appium
-```
-### Appium Server 启动
-##### 为了避免权限问题，需要启动Appium Server时加上参数：
-```
-appium --relexed-security
-```
-### ADB 连接
-
-#### 由于测试手机为华为系的荣耀，对Android系统改动比较大，所以启用开发者模式时，adb无法连接，解决方法就是下载抽取的荣耀驱动
-```
-分别进入all与new文件夹，分别运行DriverUninstall.exe
-```
-
-### Appium Inspector Desired Capabilities 配置
-```
-{
-  "platformName": "Android",
-  "appium:platformVersion": "12.0",
-  "appium:deviceName": "RKY-AN00",
-  "appium:udid": "A9TR9X3522W02769",
-  "appium:appPackage": "com.hpbr.bosszhipin",
-  "appium:appActivity": "com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
   "appium:appWaitActivity": "com.hpbr.bosszhipin.module.main.activity.MainActivity, com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
   "appium:automationName": "UiAutomator2",
   "appium:ensureWebviewsHavePages": true,
