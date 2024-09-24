@@ -50,4 +50,4 @@ python boss_android.py
 ##图片参考
 
 boss直聘APP界面
-<img src="path/to/image.jpg" alt="描述" width="300" height="200">
+<img src="[path/to/image.jpg](https://github.com/sjiangtao2024/appium_bosszhipin/blob/main/screen_shots/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240924100429.jpg)" alt="Bosszhipin APP" width="300" height="200">
