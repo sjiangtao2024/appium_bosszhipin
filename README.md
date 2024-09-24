@@ -51,7 +51,7 @@ appium --relaxed-security
 ```
 ### ADB 连接
 
-#### 由于测试手机为华为系的荣耀，对Android系统改动比较大，所以启用开发者模式时，adb无法连接，解决方法就是下载抽取的荣耀驱动
+#### 由于测试手机为华为系的荣耀，对Android系统改动比较大，所以启用开发者模式时，adb无法连接，解决方法就是下载抽取的荣耀驱动HDB_Interface.7z，解压后
 ```
 分别进入all与new文件夹，分别运行DriverUninstall.exe
 ```
