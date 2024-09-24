@@ -45,7 +45,7 @@ npm install -g appium
 ### Appium Server 启动
 ##### 为了避免权限问题，需要启动Appium Server时加上参数：
 ```
-appium --relexed-security
+appium --relaxed-security
 ```
 ### ADB 连接
 
