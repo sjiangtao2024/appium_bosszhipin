@@ -105,4 +105,4 @@ job_card_detail_page_click_simulate(driver)
 ##图片参考
 
 boss直聘APP界面
-<img src="screen_shots/20240924100429.jpg" alt="Boss直聘界面" width="720" height="1600">
+<img src="screen_shots/20240924100429.jpg" alt="Boss直聘界面" width="360" height="800">
