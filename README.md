@@ -92,6 +92,7 @@ REMOTE_URL= http://<Appium server address>:4723
 CAPABILITIES_FILE_NAME=boss_honor_capabilities.json
 JOB_NUM=1
 ```
+#### 先启动boss直聘app，然后退出
 ```
 python boss_android.py
 ```
