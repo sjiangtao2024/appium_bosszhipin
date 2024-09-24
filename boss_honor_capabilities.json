@@ -1,0 +1,15 @@
+{
+    "platformName": "Android",
+    "appium:platformVersion": "12.0",
+    "appium:deviceName": "RKY-AN00",
+    "appium:udid": "A9TR9X3522W02769",
+    "appium:appPackage": "com.hpbr.bosszhipin",
+    "appium:appActivity": "com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
+    "appium:appWaitActivity": "com.hpbr.bosszhipin.module.main.activity.MainActivity, com.hpbr.bosszhipin.module.splash.activity.SplashActivity",
+    "appium:automationName": "UiAutomator2",
+    "appium:ensureWebviewsHavePages": true,
+    "appium:nativeWebScreenshot": true,
+    "appium:newCommandTimeout": 3600,
+    "appium:connectHardwareKeyboard": true,
+    "appium:noReset": true
+}
